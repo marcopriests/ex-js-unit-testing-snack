@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average } = require('./snack.js');
+const { getInitials, createSlug, average, isPalindrome } = require('./snack.js');
 
 // 🏆 Snack 1
 // Creare un test che verifichi la seguente descrizione:
@@ -39,4 +39,14 @@ test('La funzione average calcola la media aritmetica di un array di numeri.', (
 test('La funzione createSlug sostituisce gli spazi con -.', () => {
     expect(createSlug("Questo è un test")).toBe("questo-è-un-test");
     expect(createSlug("Questo è un altro test")).toBe("questo-è-un-altro-test");
+})
+
+// 🏆 Snack 5
+// Creare un test che verifichi la seguente descrizione:ù
+// 👉 "La funzione isPalindrome verifica se una stringa è un palindromo."
+// 📌 Nota: una stringa palindroma è una sequenza di caratteri che si legge uguale sia da sinistra a destra che da destra a sinistra.
+
+test('La funzione isPalindrome verifica se una stringa è un palindromo.', () => {
+    expect(isPalindrome('Anna')).toBeTruthy();
+    expect(isPalindrome('Marco')).toBeFalsy();
 })

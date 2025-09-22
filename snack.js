@@ -27,4 +27,11 @@ const average = arr => arr.reduce((acc, num) => {
 
 const createSlug = str => str.split(' ').join('-').toLowerCase().trim();
 
-module.exports = { getInitials, createSlug, average }
+// 🏆 Snack 5
+// Creare un test che verifichi la seguente descrizione:ù
+// 👉 "La funzione isPalindrome verifica se una stringa è un palindromo."
+// 📌 Nota: una stringa palindroma è una sequenza di caratteri che si legge uguale sia da sinistra a destra che da destra a sinistra.
+
+const isPalindrome = str => str.toLowerCase() === str.split('').reverse().join('').toLowerCase();
+
+module.exports = { getInitials, createSlug, average, isPalindrome }
